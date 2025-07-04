@@ -1,16 +1,13 @@
 
 #%%
-###################################################### Local 용
 import os
 import streamlit as st
 os.environ['LANGSMITH_TRACING']  = st.secrets['LANGSMITH_TRACING']
 os.environ['LANGSMITH_ENDPOINT'] = st.secrets['LANGSMITH_ENDPOINT']
 os.environ['LANGSMITH_API_KEY']  = st.secrets['LANGSMITH_API_KEY']
 os.environ['LANGSMITH_PROJECT']  = st.secrets['LANGSMITH_PROJECT']
-os.environ['OPENAI_API_KEY']     = st.secrets['MY_OPENAI_API_KEY']
-
-os.environ['OPENAI_EMBEDDING_MODEL']  = st.secrets['OPENAI_EMBEDDING_MODEL']
-os.environ['PINECONE_API_KEY']        = st.secrets['PINECONE_API_KEY']
+os.environ['OPENAI_API_KEY']     = st.secrets['OPENAI_API_KEY']
+os.environ['PINECONE_API_KEY']   = st.secrets['PINECONE_API_KEY']
 
 #%%
 from langchain_pinecone import PineconeVectorStore
